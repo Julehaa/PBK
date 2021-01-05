@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//pages
+Route::get('/', 'PagesController@home');
+Route::get('/about', 'PagesController@about');
+
+// //students
+Route::resource('/students', 'StudentsController');
